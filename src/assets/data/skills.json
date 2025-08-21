@@ -1,0 +1,130 @@
+{
+  "formations": [
+    {
+      "date": "2017",
+      "centre": "IUT d'Orléans",
+      "titre": "Licence Professionnelle ResTem",
+      "description": "Développement Web et Mobilité",
+      "tags": ["Python", "Django", "Php", "Wordpress", "Symfony", "Java", "Javascript"]
+    },
+    {
+      "date": "2020",
+      "centre": "FCT Solution",
+      "titre": "Certification Scrum Master",
+      "description": "",
+      "tags": ["Agile"]
+    },
+    {
+      "date": "2023",
+      "centre": "ORSYS",
+      "titre": "Angular, NodeJS, Nest",
+      "description": "",
+      "tags": ["Angular", "Node.js", "Nest"]
+    },
+    {
+      "date": "2023",
+      "centre": "IB CEGOS",
+      "titre": "Gestion de projet",
+      "description": "",
+      "tags": ["Agile"]
+    }
+  ],
+  "experiences": [
+    {
+      "date": "12/2024 - 06/2025",
+      "entreprise": "Kéo Portage",
+      "client": "Cartier",
+      "poste": "Développeur Fullstack",
+      "description": "Développement d'une application web de tableau de bord de projets.",
+      "tags": ["React", "Kotlin", "Docker", "PostgreSQL", "Jira", "Keycloak", "Git"]
+    },
+    {
+      "date": "09/2024 - 12/2024",
+      "entreprise": "Acatus informatique",
+      "client": "BRGM",
+      "poste": "Développeur Front-end",
+      "description": "Refonte du front de l'application MétéEau Nappes.",
+      "tags": ["Angular", "Jira", "PostgreSQL", "Spring Boot", "Keycloak", "Git"]
+    },
+    {
+      "date": "06/2024 - 08/2024",
+      "entreprise": "Acatus informatique",
+      "client": "BRGM",
+      "poste": "Analyste Développeur",
+      "description": "Dévelopement d'un batch permettant de récupérer les données de l'API Météo France.",
+      "tags": [".NET", "API MétéoFrance", "PostgreSQL", "Git"]
+    },
+    {
+      "date": "01/2024 - 05/2024",
+      "entreprise": "Acatus informatique",
+      "client": "IRFA & Phileas",
+      "poste": "Analyste Développeur",
+      "description": "Dévelopement de pages et fonctionnalité sur Wordpress.",
+      "tags": ["Wordpress", "MySQL", "React", "Git"]
+    },
+    {
+      "date": "12/2018 - 02/2021 & 09/2022 - 12/2023",
+      "entreprise": "Acatus informatique",
+      "client": "Oresys",
+      "poste": "Analyste Développeur",
+      "description": "TMA et TME. Divers missions sur l'ensemble du SI du client.",
+      "tags": ["SQL Server", "ASP.NET", "C#", "Angular", "Typescript", "SSIS", "VBA", "Mentis", "Git"]
+    },
+    {
+      "date": "08/2022",
+      "entreprise": "Acatus informatique",
+      "client": "Grand Paris Circulaire",
+      "poste": "Analyste Développeur",
+      "description": "Développement d'un site internet pour gérer un événement (billeterie, conférences, etc...).",
+      "tags": ["Wordpress", "MySQL", "Git"]
+    },
+    {
+      "date": "12/2021 - 06/2022",
+      "entreprise": "Acatus informatique",
+      "client": "Agirc Arrco",
+      "poste": "Développeur Front-end",
+      "description": "Refonte des écrans DSN",
+      "tags": ["Angular", "Java", "SVN", "Jira", "PostgreSQL"]
+    },
+    {
+      "date": "03/2021 - 11/2021",
+      "entreprise": "Acatus informatique",
+      "client": "Entrust",
+      "poste": "Intégrateur Système",
+      "description": "",
+      "tags": ["Javascript", "SQL Server", "TCP/IP"]
+    },
+    {
+      "date": "11/2018",
+      "entreprise": "Acatus informatique",
+      "client": "Groupe KERING",
+      "poste": "Analyste Développeur",
+      "description": "",
+      "tags": ["MySQL", "Batch Windows", "Python"]
+    },
+    {
+      "date": "01/2018 - 10/2018",
+      "entreprise": "Acatus informatique",
+      "client": "Richemont",
+      "poste": "Analyste Développeur",
+      "description": "Refonte de l'Intranet Qualité Développement",
+      "tags": ["Symfony", "JQuery", "Datatable", "SQL Server"]
+    },
+    {
+      "date": "09/2016 - 08/2017",
+      "entreprise": "DRAC Orléans",
+      "client": "",
+      "poste": "Alternance",
+      "description": "Développement d'une application web de gestion de courier électronique",
+      "tags": ["Django", "PostgreSQL"]
+    },
+    {
+      "date": "10/2015 - 08/2016",
+      "entreprise": "Netixia",
+      "client": "",
+      "poste": "Alternance",
+      "description": "Mise en place de tests",
+      "tags": ["Ruby on Rails"]
+    }
+  ]
+}

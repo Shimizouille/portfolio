@@ -1,1 +1,43 @@
-<p>skills works!</p>
+<div class="m-20">
+    <div class="tabs">
+    <button (click)="setTab('formations')" [class.active]="activeTab === 'formations'">
+        Formations
+    </button>
+    <button (click)="setTab('experiences')" [class.active]="activeTab === 'experiences'">
+        Expériences
+    </button>
+    </div>
+
+    <!-- Filtres -->
+    <div class="filters">
+    <select [(ngModel)]="selectedTag" (change)="updateFilteredItems()">
+        <option value="">Tous les tags</option>
+        <option *ngFor="let tag of tagsList" [value]="tag">{{ tag }}</option>
+    </select>
+
+    <select [(ngModel)]="selectedEntreprise" (change)="updateFilteredItems()">
+        <option value="">Toutes les entreprises/centres</option>
+        <option *ngFor="let ent of entreprisesList" [value]="ent">{{ ent }}</option>
+    </select>
+
+    <select [(ngModel)]="selectedDate" (change)="updateFilteredItems()">
+        <option value="">Toutes les dates</option>
+        <option *ngFor="let d of datesList" [value]="d">{{ d }}</option>
+    </select>
+    </div>
+
+    <!-- Liste des cartes -->
+    <div class="cards-container overflow-y-auto max-h-140">
+        <div *ngFor="let item of filteredItems" class="card">
+            <h3>{{ getTitre(item) }}</h3>
+            <p>
+            <strong>{{ item.date }}</strong> - {{ getOrganisation(item) }}
+            </p>
+            <p>{{ item.description }}</p>
+            <div class="tags">
+            <span *ngFor="let tag of item.tags" class="tag">{{ tag }}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
