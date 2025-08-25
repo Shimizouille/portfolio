@@ -107,4 +107,48 @@ export class Skills implements OnInit {
       : (item as Experience).entreprise;
   }
 
+  getColorForTag(tag: string): string {
+    let hash = 0;
+    for (let i = 0; i < tag.length; i++) {
+      hash = tag.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    // Convert hash en code couleur hex
+    let color = '#';
+    for (let i = 0; i < 3; i++) {
+      const value = (hash >> (i * 8)) & 0xFF;
+      color += ('00' + value.toString(16)).slice(-2);
+    }
+    return color;
+
+    // Hue = entre 0 et 360
+    // const hue = Math.abs(hash) % 360;
+    // const saturation = 50; // % (plus bas = plus gris, plus haut = plus vif)
+    // const lightness = 75;  // % (plus haut = plus clair/pastel)
+
+    // return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  }
+
+  getTextColor(bgColor: string): string {
+    // extrait R,G,B de "#RRGGBB"
+    const r = parseInt(bgColor.substring(1, 3), 16);
+    const g = parseInt(bgColor.substring(3, 5), 16);
+    const b = parseInt(bgColor.substring(5, 7), 16);
+
+    // calcul de la luminosité (selon ITU-R BT.709)
+    const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+    // seuil classique ≈ 128 (milieu de 0–255)
+    return luminance > 150 ? 'black' : 'white';
+
+    // // extraire les valeurs h, s, l depuis hsl(h, s%, l%)
+    // const result = /hsl\((\d+),\s*(\d+)%?,\s*(\d+)%?\)/.exec(bgColor);
+    // if (!result) return "black"; // fallback
+
+    // const l = parseInt(result[3], 10);
+
+    // // si la luminosité est trop haute → texte noir, sinon blanc
+    // return l > 60 ? "black" : "white";
+  }
+
 }

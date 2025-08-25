@@ -54,13 +54,12 @@
 }
 
 .tag {
-  background: #007acc;
-  color: white;
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 
 option {
-    color: #2C3E50;
+    color: rgb(15, 23, 42);
 }

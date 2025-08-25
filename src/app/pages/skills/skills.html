@@ -29,15 +29,20 @@
     <!-- Liste des cartes -->
     <div class="cards-container overflow-y-auto max-h-140">
         @for (item of filteredItems; track item) {
-            <div class="card">
-                <h3>{{ getTitre(item) }}</h3>
-                <p>
-                    <strong>{{ item.date }}</strong> - {{ getOrganisation(item) }}
-                </p>
-                <p>{{ item.description }}</p>
+            <div class="card flex flex-col">
+                <div class="flex flex-row justify-between mb-3">
+                    <p>{{ item.date }}</p>
+                    <p><strong>{{ getOrganisation(item) }}</strong></p>
+                </div>
+                <h3 class="text-xl font-bold">{{ getTitre(item) }}</h3>
+                <p class="mb-3">{{ item.description }}</p>
                 <div class="tags">
                     @for (tag of item.tags; track tag) {
-                        <span class="tag">{{ tag }}</span>
+                        <span class="tag" 
+                            [style.background-color]="getColorForTag(tag)" 
+                            [style.color]="getTextColor(getColorForTag(tag))">
+                                {{ tag }}
+                        </span>
                     }
                 </div>
             </div>
