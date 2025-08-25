@@ -1,1 +1,48 @@
-<p>projects works!</p>
+<div class="flex flex-col justify-around items-center pt-10 pb-25">
+    <div class="flex flex-col mb-5">
+        <a href="https://cosuplay.fr/" target="_blank">
+            <img src="assets/img/cosuplay.png" alt="Site CosUPlay" width="500px">
+        </a>
+        <div class="description flex flex-row justify-between p-3">
+            <h2 class="self-center text-lg font-bold">CosUPlay</h2>
+            <div class="tags">
+                <span class="tag" [style.background-color]="getColorForTag('Wordpress')" 
+                            [style.color]="getTextColor(getColorForTag('Wordpress'))">Wordpress</span>
+                <span class="tag" [style.background-color]="getColorForTag('MySql')" 
+                            [style.color]="getTextColor(getColorForTag('MySql'))">MySql</span>
+                <span class="tag" [style.background-color]="getColorForTag('Php')" 
+                            [style.color]="getTextColor(getColorForTag('Php'))">Php</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col mb-5">
+        <a routerLink="/">
+            <img src="assets/img/portfolio.png" alt="Site Portfolio" width="500px">
+        </a>
+        <div class="description flex flex-row justify-between p-3">
+            <h2 class="self-center text-lg font-bold">Portfolio</h2>
+            <div class="tags">
+                <span class="tag" [style.background-color]="getColorForTag('Angular')" 
+                            [style.color]="getTextColor(getColorForTag('Angular'))">Angular</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col">
+        <a href="" target="_blank">
+            <img src="assets/img/kpotheque.png" alt="Site Kpothèque" width="500px">
+        </a>
+        <div class="description flex flex-row justify-between p-3">
+            <h2 class="self-center text-lg font-bold">My K-pothèque</h2>
+            <div class="tags">
+                <span class="tag" [style.background-color]="getColorForTag('React')" 
+                            [style.color]="getTextColor(getColorForTag('React'))">React</span>
+                <span class="tag" [style.background-color]="getColorForTag('Api Music Brainz')" 
+                            [style.color]="getTextColor(getColorForTag('Api Music Brainz'))">Api Music Brainz</span>
+                <span class="tag" [style.background-color]="getColorForTag('...')" 
+                            [style.color]="getTextColor(getColorForTag('...'))">...</span>
+            </div>
+        </div>
+    </div>
+</div>
