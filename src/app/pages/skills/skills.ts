@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SkillsData, Formation, Experience } from '../../models/skills.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import skillsData from '../../../assets/data/skills.json';
+import { SkillsService } from '../../services/skills';
 
 @Component({
   selector: 'app-skills',
@@ -12,7 +12,7 @@ import skillsData from '../../../assets/data/skills.json';
 })
 export class Skills implements OnInit {
   activeTab: 'formations' | 'experiences' = 'formations';
-  data: SkillsData = skillsData;
+  data!: SkillsData ;
   filteredItems: (Formation | Experience)[] = [];
 
   // Listes uniques pour les filtres
@@ -25,12 +25,14 @@ export class Skills implements OnInit {
   selectedEntreprise: string = '';
   selectedDate: string = '';
 
-  constructor() {}
+  constructor(private skillsService: SkillsService) {}
 
   ngOnInit() {
-    this.data = skillsData;
-    this.generateFilters();
-    this.updateFilteredItems();
+    this.skillsService.getSkills().subscribe(res => {
+      this.data = res;
+      this.generateFilters();
+      this.updateFilteredItems();
+    });
   }
 
   setTab(tab: 'formations' | 'experiences') {
@@ -47,6 +49,8 @@ export class Skills implements OnInit {
   }
 
   generateFilters() {
+    if (!this.data) return;
+
     const items = this.data[this.activeTab] || [];
 
     // Tags

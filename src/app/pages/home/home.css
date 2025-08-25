@@ -1,4 +1,13 @@
-img {
+.img-rounded {
   border-radius: 50%;
+  box-shadow: -1px -1px 5px #F7F9FB, 1px -1px 5px #F7F9FB, -1px 1px 5px #F7F9FB, 1px 1px 5px #F7F9FB;
   display: block;
+}
+
+.tag {
+  background: #F7F9FB;
+  color: rgb(15, 23, 42);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
 }

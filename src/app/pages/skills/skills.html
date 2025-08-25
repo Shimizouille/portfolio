@@ -28,16 +28,23 @@
 
     <!-- Liste des cartes -->
     <div class="cards-container overflow-y-auto max-h-140">
-        <div *ngFor="let item of filteredItems" class="card">
-            <h3>{{ getTitre(item) }}</h3>
-            <p>
-            <strong>{{ item.date }}</strong> - {{ getOrganisation(item) }}
-            </p>
-            <p>{{ item.description }}</p>
-            <div class="tags">
-            <span *ngFor="let tag of item.tags" class="tag">{{ tag }}</span>
+        @for (item of filteredItems; track item) {
+            <div class="card">
+                <h3>{{ getTitre(item) }}</h3>
+                <p>
+                    <strong>{{ item.date }}</strong> - {{ getOrganisation(item) }}
+                </p>
+                <p>{{ item.description }}</p>
+                <div class="tags">
+                    @for (tag of item.tags; track tag) {
+                        <span class="tag">{{ tag }}</span>
+                    }
+                </div>
             </div>
-        </div>
+        } @empty {
+            <li>There are no items.</li>
+        }
+        
     </div>
 
 </div>

@@ -22,7 +22,8 @@ a {
 }
 
 .active {
-  color: #2C3E50;
-  font-size: 20px;
-  font-weight: bold;
+  color: rgb(15, 23, 42);
+  text-shadow: -1px -1px 5px #F7F9FB, 1px -1px 5px #F7F9FB, -1px 1px 5px #F7F9FB, 1px 1px 5px #F7F9FB;
+  font-size: 22px;
+  font-weight: 900;
 }
