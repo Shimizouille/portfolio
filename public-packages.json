@@ -1,0 +1,7 @@
+{
+  "Angular": "@angular/common",
+  "RxJS": "rxjs",
+  "Typescript": "typescript",
+  "Tailwindcss": "tailwindcss",
+  "Fontawesome": "@fortawesome/angular-fontawesome"
+}

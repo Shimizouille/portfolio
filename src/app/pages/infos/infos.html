@@ -1,0 +1,38 @@
+<div class="flex flex-col m-10">
+  <div class="flex flex-col mb-5">
+    <h1 class="text-2xl font-bold mb-4">Comment me contacter ?</h1>
+    <p>Vous pouvez me contacter : </p>
+    <ul>
+      <li>
+        <fa-icon [icon]="faArrowRight"></fa-icon> 
+        Par la messagerie 
+        <a href="https://www.linkedin.com/in/claire-say-727382108/" target="_blank" class="underline">Linkedin</a></li>
+      <li><fa-icon [icon]="faArrowRight"></fa-icon> Par mail (adresse présente sur mon <a href="assets/data/Linkedin_CV_Claire_SAY.pdf" target="_blank" class="underline">cv.pdf</a>)</li>
+      <li><fa-icon [icon]="faArrowRight"></fa-icon> Par téléphone (numéro présent sur mon <a href="assets/data/Linkedin_CV_Claire_SAY.pdf" target="_blank" class="underline">cv.pdf</a>)</li>
+    </ul>
+  </div>
+
+  <div class="flex flex-col">
+    <h1 class="text-2xl font-bold mb-4">Packages utilisés</h1>
+    <table class="w-full border-collapse border border-gray-300">
+      <thead>
+        <tr class="bg-gray-100 text-black">
+          <th class="border border-gray-300 p-2 text-left">Package</th>
+          <th class="border border-gray-300 p-2 text-left">Version</th>
+        </tr>
+      </thead>
+      <tbody>
+          @for (dep of dependencies; track dep) {
+              <tr>
+                  <td class="border border-gray-300 p-2">{{ dep.name }}</td>
+                  <td class="border border-gray-300 p-2">{{ dep.version }}</td>
+              </tr>
+          }@empty {
+              <tr>
+                  <td class="border border-gray-300 p-2">There are no items.</td>
+              </tr>
+          }
+      </tbody>
+    </table>
+  </div>
+</div>

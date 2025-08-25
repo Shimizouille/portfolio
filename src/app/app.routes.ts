@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { Projects } from './pages/projects/projects';
 import { Skills } from './pages/skills/skills';
-import { Contact } from './pages/contact/contact';
+import { Infos } from './pages/infos/infos';
 
 export const routes: Routes = [
     { path: '', component: Home },
     { path: 'projects', component: Projects },
     { path: 'skills', component: Skills },
-    { path: 'contact', component: Contact },
+    { path: 'infos', component: Infos },
     { path: '**', redirectTo: '' } // fallback
 ];
 
