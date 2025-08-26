@@ -1,8 +1,17 @@
 <nav class="navbar">
     <ul class="navbar-links">
         <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">A propos</a></li>
-        <li><a routerLink="/skills" routerLinkActive="active">Curriculum Vitea</a></li>
-        <li><a routerLink="/projects" routerLinkActive="active">Projet personnel</a></li>
-        <li><a routerLink="/infos" routerLinkActive="active">Infos utiles</a></li>
+        <li><a routerLink="/skills" routerLinkActive="active">
+            <span class="hidden sm:inline">Curriculum vitae</span>
+            <span class="inline sm:hidden">CV</span>
+        </a></li>
+        <li><a routerLink="/projects" routerLinkActive="active">
+            <span class="hidden sm:inline">Projets personnels</span>
+            <span class="inline sm:hidden">Projets perso</span>
+        </a></li>
+        <li><a routerLink="/infos" routerLinkActive="active">
+            <span class="hidden sm:inline">Infos utiles</span>
+            <span class="inline sm:hidden">Infos</span>
+        </a></li>
     </ul>
 </nav>

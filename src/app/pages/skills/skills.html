@@ -1,4 +1,4 @@
-<div class="m-20">
+<div class="m-5 mb-20 md:mt-10 md:mb-20 md:mx-20 h-[calc(100vh-125px)] overflow-hidden">
     <div class="tabs">
     <button (click)="setTab('formations')" [class.active]="activeTab === 'formations'">
         Formations
@@ -27,7 +27,7 @@
     </div>
 
     <!-- Liste des cartes -->
-    <div class="cards-container overflow-y-auto max-h-140">
+    <div class="cards-container overflow-y-auto max-h-120">
         @for (item of filteredItems; track item) {
             <div class="card flex flex-col">
                 <div class="flex flex-row justify-between mb-3">
