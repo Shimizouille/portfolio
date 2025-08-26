@@ -1,0 +1,1 @@
+web: npx serve -s dist/portfolio -l $PORT
