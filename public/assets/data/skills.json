@@ -19,7 +19,7 @@
       "centre": "ORSYS",
       "titre": "Angular, NodeJS, Nest",
       "description": "",
-      "tags": ["Angular", "Node.js", "Nest"]
+      "tags": ["Angular", "Node.js", "NestJS"]
     },
     {
       "date": "2023",
@@ -39,7 +39,7 @@
       "tags": ["React", "Antd", "Kotlin", "Docker", "PostgreSQL", "Jira", "Keycloak", "Git"]
     },
     {
-      "date": "09/2024 - 12/2024",
+      "date": "09/2024 - 12/2024",                                                              
       "entreprise": "Acatus informatique",
       "client": "BRGM",
       "poste": "Développeur Front-end",
@@ -60,7 +60,7 @@
       "client": "IRFA & Phileas",
       "poste": "Analyste Développeur",
       "description": "Dévelopement de pages et fonctionnalité sur Wordpress.",
-      "tags": ["Wordpress", "MySQL", "React", "Git"]
+      "tags": ["Wordpress", "PHP", "Bootstrap", "Polylang", "MySQL", "React", "Git"]
     },
     {
       "date": "12/2018 - 02/2021 & 09/2022 - 12/2023",
@@ -68,7 +68,7 @@
       "client": "Oresys",
       "poste": "Analyste Développeur",
       "description": "TMA et TME. Divers missions sur l'ensemble du SI du client.",
-      "tags": ["SQL Server", "ASP.NET", "C#", "Angular", "Typescript", "SSIS", "VBA", "Mentis", "Git"]
+      "tags": ["SQL Server", "Procédure stockée", "ASP.NET", ".NET", "C#", "Angular", "Angular.js", "Typescript", "SSIS", "VBA", "Mentis", "Git"]
     },
     {
       "date": "08/2022",
@@ -76,7 +76,7 @@
       "client": "Grand Paris Circulaire",
       "poste": "Analyste Développeur",
       "description": "Développement d'un site internet pour gérer un événement (billeterie, conférences, etc...).",
-      "tags": ["Wordpress", "MySQL", "Git"]
+      "tags": ["Wordpress", "PHP", "Font Awesome", "MySQL", "Git"]
     },
     {
       "date": "12/2021 - 06/2022",
@@ -84,7 +84,7 @@
       "client": "Agirc Arrco",
       "poste": "Développeur Front-end",
       "description": "Refonte des écrans DSN",
-      "tags": ["Angular", "Java", "SVN", "Jira", "PostgreSQL"]
+      "tags": ["Angular", "Spring Boot", "Java", "SVN", "Jira", "PostgreSQL"]
     },
     {
       "date": "03/2021 - 11/2021",
@@ -99,7 +99,7 @@
       "entreprise": "Acatus informatique",
       "client": "Groupe KERING",
       "poste": "Analyste Développeur",
-      "description": "",
+      "description": "Débuggage sur des intranets génériques",
       "tags": ["MySQL", "Batch Windows", "Python"]
     },
     {
@@ -107,8 +107,8 @@
       "entreprise": "Acatus informatique",
       "client": "Richemont",
       "poste": "Analyste Développeur",
-      "description": "Refonte de l'Intranet Qualité Développement",
-      "tags": ["Symfony", "JQuery", "Datatable", "SQL Server"]
+      "description": "Refonte de l'Intranet Qualité de Données",
+      "tags": ["Symfony", "PHP", "Bootstrap", "JQuery", "Datatable", "SQL Server"]
     },
     {
       "date": "09/2016 - 08/2017",
@@ -123,7 +123,7 @@
       "entreprise": "Netixia",
       "client": "",
       "poste": "Alternance",
-      "description": "Mise en place de tests",
+      "description": "Etude sur les tests d'intégrations et les tests fonctionnels",
       "tags": ["Ruby on Rails"]
     }
   ]
