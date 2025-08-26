@@ -60,6 +60,13 @@
   font-weight: 500;
 }
 
+.btn-tag {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
 option {
     color: rgb(15, 23, 42);
 }
@@ -103,6 +110,31 @@ option {
 }
 
 .modal-body div {
-  margin: .25rem 0;
+  margin: 0 0 1.5rem 0;
   color: rgb(15, 23, 42);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.chip {
+  padding: .4rem .8rem;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.chip:hover {
+  background: #ddd;
+}
+
+.chip.selected {
+  background: rgb(15, 23, 42);
+  color: white;
+  font-weight: 500;
 }

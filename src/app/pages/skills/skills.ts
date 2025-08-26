@@ -210,4 +210,9 @@ export class Skills implements OnInit {
     return Object.keys(this.selectedTagsMap).filter(tag => this.selectedTagsMap[tag]);
   }
 
+  toggleTag(tag: string) {
+    this.selectedTagsMap[tag] = !this.selectedTagsMap[tag];
+    this.updateFilteredItems();
+  }
+
 }
