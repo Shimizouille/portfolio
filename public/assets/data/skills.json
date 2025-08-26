@@ -36,7 +36,7 @@
       "client": "Cartier",
       "poste": "Développeur Fullstack",
       "description": "Développement d'une application web de tableau de bord de projets.",
-      "tags": ["React", "Kotlin", "Docker", "PostgreSQL", "Jira", "Keycloak", "Git"]
+      "tags": ["React", "Antd", "Kotlin", "Docker", "PostgreSQL", "Jira", "Keycloak", "Git"]
     },
     {
       "date": "09/2024 - 12/2024",
@@ -44,7 +44,7 @@
       "client": "BRGM",
       "poste": "Développeur Front-end",
       "description": "Refonte du front de l'application MétéEau Nappes.",
-      "tags": ["Angular", "Jira", "PostgreSQL", "Spring Boot", "Keycloak", "Git"]
+      "tags": ["Angular", "Angular Material", "Jira", "PostgreSQL", "Spring Boot", "Keycloak", "Git"]
     },
     {
       "date": "06/2024 - 08/2024",

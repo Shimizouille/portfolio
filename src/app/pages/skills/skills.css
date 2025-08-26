@@ -15,7 +15,7 @@
 }
 
 .tabs button.active {
-  background: #007acc;
+  background: rgba(29, 78, 2016, 0.5);
   color: white;
 }
 
@@ -62,4 +62,47 @@
 
 option {
     color: rgb(15, 23, 42);
+}
+
+/* Modal plein écran */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* Header */
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: .5rem;
+  color: rgb(15, 23, 42);
+}
+
+.modal-header input {
+  flex: 1;
+  padding: .5rem;
+  color: rgb(15, 23, 42);
+}
+
+/* Corps scrollable */
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.modal-body div {
+  margin: .25rem 0;
+  color: rgb(15, 23, 42);
 }

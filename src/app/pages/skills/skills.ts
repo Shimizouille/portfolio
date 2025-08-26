@@ -18,12 +18,17 @@ export class Skills implements OnInit {
   // Listes uniques pour les filtres
   tagsList: string[] = [];
   entreprisesList: string[] = [];
-  datesList: string[] = [];
+  yearsList: string[] = [];
 
   // Valeurs sélectionnées
-  selectedTag: string = '';
+  selectedTagsMap: { [key: string]: boolean } = {};
   selectedEntreprise: string = '';
-  selectedDate: string = '';
+  selectedYear: string = '';
+  selectedDateOrder: '' | 'asc' | 'desc' = '';
+
+  // Modal tags
+  showTagsModal = false;
+  tagSearch = '';
 
   constructor(private skillsService: SkillsService) {}
 
@@ -43,9 +48,11 @@ export class Skills implements OnInit {
   }
 
   resetFilters() {
-    this.selectedTag = '';
     this.selectedEntreprise = '';
-    this.selectedDate = '';
+    this.selectedYear = '';
+    this.selectedDateOrder = '';
+    Object.keys(this.selectedTagsMap).forEach(tag => this.selectedTagsMap[tag] = false);
+    this.updateFilteredItems();
   }
 
   generateFilters() {
@@ -57,6 +64,11 @@ export class Skills implements OnInit {
     this.tagsList = Array.from(
       new Set(items.flatMap(item => item.tags))
     ).sort() as string[];
+    this.tagsList.forEach(tag => {
+      if (!(tag in this.selectedTagsMap)) {
+        this.selectedTagsMap[tag] = false;
+      }
+    });
 
     // Entreprises ou centres
     this.entreprisesList = Array.from(
@@ -67,19 +79,24 @@ export class Skills implements OnInit {
       ))
     ).sort() as string[];
 
-    // Dates
-    this.datesList = Array.from(
-      new Set(items.map(item => item.date))
-    ).sort() as string[];
+    // Années
+    this.yearsList = Array.from(
+      new Set(items.map(item => new Date(item.date).getFullYear().toString()))
+    ).sort((a, b) => parseInt(b) - parseInt(a));
   }
 
   updateFilteredItems() {
     let items: (Formation | Experience)[] = this.data[this.activeTab] || [];
 
-    if (this.selectedTag) {
-      items = items.filter(item => item.tags.includes(this.selectedTag));
+    // Filtre Tags (au moins un tag sélectionné doit correspondre)
+    const selectedTags = Object.keys(this.selectedTagsMap).filter(tag => this.selectedTagsMap[tag]);
+    if (selectedTags.length > 0) {
+      items = items.filter(item =>
+        item.tags.some(t => selectedTags.includes(t))
+      );
     }
 
+    // Filtre entreprise
     if (this.selectedEntreprise) {
       items = items.filter(item =>
         this.activeTab === 'formations'
@@ -88,11 +105,26 @@ export class Skills implements OnInit {
       );
     }
 
-    if (this.selectedDate) {
-      items = items.filter(item => item.date === this.selectedDate);
+    // Filtre année
+    if (this.selectedYear) {
+      items = items.filter(item =>
+        new Date(item.date).getFullYear().toString() === this.selectedYear
+      );
+    }
+
+    // Tri date
+    if (this.selectedDateOrder === 'desc') {
+      items = items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    } else if (this.selectedDateOrder === 'asc') {
+      items = items.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
     }
 
     this.filteredItems = items;
+  }
+
+  toggleAllTags(value: boolean) {
+    Object.keys(this.selectedTagsMap).forEach(tag => this.selectedTagsMap[tag] = value);
+    this.updateFilteredItems();
   }
 
   getTitre(item: Formation | Experience): string {
@@ -149,6 +181,33 @@ export class Skills implements OnInit {
 
     // // si la luminosité est trop haute → texte noir, sinon blanc
     // return l > 60 ? "black" : "white";
+  }
+
+  // Ouvrir/fermer modal
+  openTagsModal() {
+    this.showTagsModal = true;
+  }
+
+  closeTagsModal() {
+    this.showTagsModal = false;
+    this.tagSearch = '';
+  }
+
+  // Compteur tags sélectionnés
+  getSelectedTagsCount(): number {
+    return Object.values(this.selectedTagsMap).filter(v => v).length;
+  }
+
+  // Filtrer tags dans modal
+  filteredTags(): string[] {
+    return this.tagsList.filter(tag =>
+      tag.toLowerCase().includes(this.tagSearch.toLowerCase())
+    );
+  }
+
+  // Récupérer liste des tags sélectionnés (si besoin pour affichage chips)
+  getSelectedTags(): string[] {
+    return Object.keys(this.selectedTagsMap).filter(tag => this.selectedTagsMap[tag]);
   }
 
 }
