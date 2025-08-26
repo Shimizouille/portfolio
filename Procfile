@@ -1,1 +1,1 @@
-web: npx serve -s dist/portfolio -l $PORT
+web: npx serve -s dist/portfolio/browser -l $PORT
