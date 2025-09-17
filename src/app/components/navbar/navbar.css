@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(216, 221, 230, .5);
+    background-color: rgb(216, 221, 230);
     height: 50px;
 }
 
@@ -16,14 +16,13 @@
 
 a {
     text-decoration: none;
-    color: #F7F9FB;
+    color: rgb(15, 23, 42);
     font-size: 16px;
     font-weight: normal;
 }
 
 .active {
   color: rgb(15, 23, 42);
-  text-shadow: -1px -1px 5px #F7F9FB, 1px -1px 5px #F7F9FB, -1px 1px 5px #F7F9FB, 1px 1px 5px #F7F9FB;
   font-size: 22px;
   font-weight: 900;
 }
